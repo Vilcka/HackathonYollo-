@@ -24,7 +24,17 @@ function starter($speed1,$speed2){
 }
 
 
-function attaque($lifeEnnemies)
+function attaque($lifeEnnemies ,$attack)
 {
-    return $lifeEnnemies - 10;
+    if($attack == 1) {
+        return $lifeEnnemies - 10;
+    } elseif($attack == 2) {
+        return $lifeEnnemies - 20;
+    }elseif($attack == 3) {
+        return $lifeEnnemies - 30;
+    }elseif($attack == 4) {
+        return $lifeEnnemies - 40;
+    } else {
+        return $lifeEnnemies;
+    }
 }

@@ -23,6 +23,21 @@ $life2 = $_GET['pv2'];
 $start = $_GET['start'];
 
 
+if(isset($_GET['attack'])) {
+    $attack = $_GET['attack'];
+}else {
+    $attack = 0;
+}
+
+if ($start == 1) {
+    $life2 = attaque($life2,$attack);
+    $start = 2;
+} elseif ($start == 2) {
+    $life1 = attaque($life1,$attack);
+    $start = 1;
+}
+
+
 if($life1 == 0 || $life2 ==0) {
     if ($life1 <= 0) {
         $winId = $_GET['id2'];
@@ -31,14 +46,6 @@ if($life1 == 0 || $life2 ==0) {
         $winId = $_GET['id1'];
      header("Location:win.php?id=" . $winId);
     }
-}
-
-if ($start == 1) {
-    $life2 = attaque($life2);
-    $start = 2;
-} elseif ($start == 2) {
-    $life1 = attaque($life1);
-    $start = 1;
 }
 
 
@@ -101,8 +108,22 @@ if ($start == 1) {
 
         </div>
         <div class="col-6 text-center">
-            <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>"><img src="http://via.placeholder.com/350x65">
-            </a>
+            <div class="row">
+                <div class="col-3">
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=1"><img src="http://via.placeholder.com/65x65"></a>
+                </div>
+                <div class="col-3">
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=2"><img src="http://via.placeholder.com/65x65"></a>
+
+                </div>
+                <div class="col-3">
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=3"><img src="http://via.placeholder.com/65x65"></a>
+
+                </div>
+                <div class="col-3">
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=4"><img src="http://via.placeholder.com/65x65"></a>
+                </div>
+            </div>
         </div>
         <div class="col-3 ">
             Brain :<?= $heroManager->selectById($_GET['id2'])->powerstats->intelligence; ?><br>
@@ -139,4 +160,3 @@ if ($start == 1) {
 <script src="../../../../assets/js/vendor/holder.min.js"></script>
 </body>
 </html>
-
