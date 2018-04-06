@@ -59,25 +59,25 @@ if (isset ($_GET['id2'])){
         </div>
     </div>
     <div class="row mb-5 mt-5">
-        <div class="col-3 text-center"><h4><?= $heroManager->selectById($_GET['id1'])->name ?></h4></div>
-        <div class="col-6 text-center"></div>
-        <div class="col-3 text-center"><h4><?= $heroManager->selectById($_GET['id2'])->name ?></h4></div>
+        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id1'])->name ?></h5></div>
+        <div class="col-6 text-center"><img src="https://thumbs.gfycat.com/DimpledSentimentalHyrax-max-1mb.gif"></div>
+        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id2'])->name ?></h5></div>
     </div>
 </main>
 <div class="container">
-    <div class="row mt-5 zoom">
+    <div class="row mt-5 ">
         <?php for($i=1;$i<7;$i++): ?>
             <div class="col-2">
-                <a href="index2.php?id1=<?= $i; ?>">
+
                     <img class="img-fluid" class="jpg" src="<?= $heroManager->selectById($i)->images->md; ?>" width="100%">
-                </a>
+
             </div>
         <?php endfor; ?>
 
     </div>
     <div class="row mt-5 ">
         <div class="col-12 text-center">
-            <h1>choose your player</h1>
+
         </div>
 
     </div>

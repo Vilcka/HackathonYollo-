@@ -34,9 +34,9 @@ $heroManager->selectById(13);
           <div class="col-3"><img class="img-fluid" src="generique.jpg"></div>
       </div>
      <div class="row mb-5 mt-5">
-         <div class="col-3 text-center"><h4>choose your player</h4></div>
+         <div class="col-3 text-center"><h5>Player 1</h5></div>
          <div class="col-6 text-center"></div>
-         <div class="col-3 text-center"><h4>choose your player</h4></div>
+         <div class="col-3 text-center"><h5>Player 2</h5></div>
      </div>
  </main>
 <div class="container">
@@ -53,7 +53,7 @@ $heroManager->selectById(13);
         </div>
     <div class="row mt-5 ">
         <div class="col-12 text-center">
-        <h1>choose your player</h1>
+        <h2>choose player 1</h2>
         </div>
 
     </div>

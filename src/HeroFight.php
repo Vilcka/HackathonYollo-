@@ -16,3 +16,4 @@ class HeroFight
 {
     private $
 }
+

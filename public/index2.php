@@ -55,11 +55,11 @@ $heroManager->selectById(13);
     </div>
         <div class="row mb-5 mt-5">
             <div class="col-3 text-center">
-                <h4><?= $heroManager->selectById($_GET['id1'])->name ?></h4>
+                <h5><?= $heroManager->selectById($_GET['id1'])->name ?></h5>
             </div>
             <div class="col-6 text-center"></div>
             <div class="col-3 text-center">
-                <h4>choose your player</h4>
+                <h5>Player 2</h5>
             </div>
         </div>
 </main>
@@ -77,7 +77,7 @@ $heroManager->selectById(13);
     </div>
     <div class="row mt-5 ">
         <div class="col-12 text-center">
-            <h1>choose your player</h1>
+            <h2>choose player 2</h2>
         </div>
 
     </div>
