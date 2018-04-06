@@ -10,7 +10,7 @@ namespace App;
 
 require '../vendor/autoload.php';
 
-use GuzzleHttp;
+
 
 class HeroFight
 {

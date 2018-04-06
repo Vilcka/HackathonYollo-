@@ -1,11 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder9
- * Date: 06/04/18
- * Time: 01:53
- */
+
+require '../vendor/autoload.php';
+
+$urlImg = 'https://akabab.github.io/superhero-api/api/images/md/';
+$heroManager = new App\HeroManager();
+$heroManager->selectById(13);
 ?>
+
+
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -27,9 +29,9 @@
  <main role="main" class="container">
 
       <div class="row mb-5 mt-5">
-          <div class="col-3"><img class="img-fluid" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg"></div>
+          <div class="col-3"><img class="img-fluid" src="generique.jpg"></div>
           <div class="col-6 text-center"><img class="img-fluid" src="https://static.comicvine.com/uploads/original/8/84424/5095081-6043063200-stick.png"></div>
-          <div class="col-3"><img class="img-fluid" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg"></div>
+          <div class="col-3"><img class="img-fluid" src="generique.jpg"></div>
       </div>
      <div class="row mb-5 mt-5">
          <div class="col-3 text-center"><h4>choose your player</h4></div>
@@ -39,16 +41,13 @@
  </main>
 <div class="container">
         <div class="row mt-5">
-
-
-
-
-            <div class="col-2"><a href="/public/index2.php?id1=1"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></a></div>
-            <div class="col-2"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></div>
-            <div class="col-2"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></div>
-            <div class="col-2"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></div>
-            <div class="col-2"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></div>
-            <div class="col-2"><img class="img-fluid" class="jpg" src="https://raw.githubusercontent.com/akabab/superhero-api/0.2.0/api/images/md/334-huntress.jpg" width="100%"></div>
+            <?php for($i=1;$i<7;$i++): ?>
+                    <div class="col-2">
+                        <a href="index2.php?id1=<?= $i; ?>">
+                            <img class="img-fluid" class="jpg" src="<?= $heroManager->selectById($i)->images->md; ?>" width="100%">
+                        </a>
+                    </div>
+            <?php endfor; ?>
 
 
         </div>
