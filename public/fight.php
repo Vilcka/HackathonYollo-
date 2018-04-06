@@ -1,5 +1,6 @@
 <?php
 
+
 require '../vendor/autoload.php';
 
 $urlImg = 'https://akabab.github.io/superhero-api/api/images/md/';
@@ -109,4 +110,5 @@ if (isset ($_GET['id2'])){
 <script src="../../../../assets/js/vendor/holder.min.js"></script>
 </body>
 </html>
+
 
