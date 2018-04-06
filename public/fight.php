@@ -113,18 +113,18 @@ if($life1 <= 0 || $life2 <=0) {
         <div class="col-6 text-center">
             <div class="row">
                 <div class="col-3">
-                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=1"><img src="https://image.noelshack.com/fichiers/2018/14/5/1523006631-sort.png" style="width:120px; height:120px;"></a>
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=1"><img src="force.png" style="width:120px; height:120px;"></a>
                 </div>
                 <div class="col-3">
-                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=2"><img src="https://image.noelshack.com/fichiers/2018/14/5/1523006637-sort2.png" style="width:120px; height:120px;"></a>
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=2"><img src="speed.png" style="width:120px; height:120px;"></a>
 
                 </div>
                 <div class="col-3">
-                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=3"><img src="https://image.noelshack.com/fichiers/2018/14/5/1523006631-sort.png" style="width:120px; height:120px;"></a>
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=3"><img src="magie.png" style="width:120px; height:120px;"></a>
 
                 </div>
                 <div class="col-3">
-                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=4"><img src="https://image.noelshack.com/fichiers/2018/14/5/1523006637-sort2.png" style="width:120px; height:120px;"></a>
+                    <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>&attack=4"><img src="brain.png" style="width:120px; height:120px;"></a>
                 </div>
             </div>
         </div>
