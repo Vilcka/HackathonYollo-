@@ -1,6 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
+require '../src/function.php';
 
 $urlImg = 'https://akabab.github.io/superhero-api/api/images/md/';
 $heroManager = new App\HeroManager();
@@ -16,7 +17,9 @@ if (isset ($_GET['id2'])){
     $id2 = $_GET['id2'];
     $url2 = $heroManager->selectById($id2)->images->md;
 }
-
+$speed1 = $heroManager->selectById($_GET['id2'])->powerstats->speed;
+$speed2 = $heroManager->selectById($_GET['id2'])->powerstats->speed;
+$start = starter($speed1,$speed2);
 
 ?>
 
@@ -60,19 +63,14 @@ if (isset ($_GET['id2'])){
     </div>
     <div class="row mb-5 mt-5">
         <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id1'])->name ?></h5></div>
-        <div class="col-6 text-center"><img src="https://thumbs.gfycat.com/DimpledSentimentalHyrax-max-1mb.gif"></div>
+        <div class="col-6 text-center"><a href="fight.php?id1=<?= $_GET['id1'] ?>&id2=<?= $_GET['id2'] ?>&pv1=100&pv2=100&start=<?= $start; ?>"><img src="sstart.gif" width="50%"></a></div>
         <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id2'])->name ?></h5></div>
     </div>
 </main>
 <div class="container">
     <div class="row mt-5 ">
-        <?php for($i=1;$i<7;$i++): ?>
-            <div class="col-2">
 
-                    <img class="img-fluid" class="jpg" src="<?= $heroManager->selectById($i)->images->md; ?>" width="100%">
 
-            </div>
-        <?php endfor; ?>
 
     </div>
     <div class="row mt-5 ">
