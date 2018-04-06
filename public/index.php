@@ -30,7 +30,7 @@ $heroManager->selectById(13);
 
       <div class="row mb-5 mt-5">
           <div class="col-3"><img class="img-fluid" src="generique.jpg"></div>
-          <div class="col-6 text-center"><img class="img-fluid" src="https://static.comicvine.com/uploads/original/8/84424/5095081-6043063200-stick.png"></div>
+          <div class="col-6 text-center"><img class="img-fluid " src="https://static.comicvine.com/uploads/original/8/84424/5095081-6043063200-stick.png"></div>
           <div class="col-3"><img class="img-fluid" src="generique.jpg"></div>
       </div>
      <div class="row mb-5 mt-5">

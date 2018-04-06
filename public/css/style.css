@@ -20,10 +20,19 @@ body{
 
 }
 
-.life{
+.live{
 
-    background-color: chartreuse;
+    background-color: darkorange;
+    height:20px;
+
 
 
 
 }
+
+.liveborder{
+
+    border:2px dotted white;
+    height:24px;
+}
+

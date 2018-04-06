@@ -17,7 +17,7 @@ if (isset ($_GET['id2'])){
     $id2 = $_GET['id2'];
     $url2 = $heroManager->selectById($id2)->images->md;
 }
-$speed1 = $heroManager->selectById($_GET['id2'])->powerstats->speed;
+$speed1 = $heroManager->selectById($_GET['id1'])->powerstats->speed;
 $speed2 = $heroManager->selectById($_GET['id2'])->powerstats->speed;
 $start = starter($speed1,$speed2);
 
