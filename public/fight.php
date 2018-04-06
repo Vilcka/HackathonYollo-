@@ -95,9 +95,9 @@ if($life1 <= 0 || $life2 <=0) {
         </div>
     </div>
     <div class="row mb-5 mt-5">
-        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id1'])->name ?></h5><h5>VIE : <?= $_GET['pv1']; ?></h5></div>
+        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id1'])->name ?></h5><div class="liveborder mb-2"><div class="live " style="width: <?= $_GET['pv1']; ?>%"></div></div><h5>VIE : <?= $_GET['pv1']; ?></h5></div>
         <div class="col-6 text-center"></div>
-        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id2'])->name ?></h5><h5>VIE : <?= $_GET['pv2']; ?></h5></div>
+        <div class="col-3 text-center"><h5><?= $heroManager->selectById($_GET['id2'])->name ?></h5><div class="liveborder mb-2"><div class="live " style="width: <?= $_GET['pv2']; ?>%"></div></div><h5>VIE : <?= $_GET['pv2']; ?></h5></div>
     </div>
     <div class="row mb-5 mt-5">
         <div class="col-3 ">
