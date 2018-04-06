@@ -1,7 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
-
+require '../src/function.php';
 $urlImg = 'https://akabab.github.io/superhero-api/api/images/md/';
 $heroManager = new App\HeroManager();
 $heroManager->selectById(13);
@@ -12,10 +12,37 @@ if (isset ($_GET['id1'])){
     $id1 = $_GET['id1'];
     $url1 = $heroManager->selectById($id1)->images->md;
 }
+
 if (isset ($_GET['id2'])){
     $id2 = $_GET['id2'];
     $url2 = $heroManager->selectById($id2)->images->md;
 }
+
+$life1 = $_GET['pv1'];
+$life2 = $_GET['pv2'];
+$start = $_GET['start'];
+
+
+if($life1 == 0 || $life2 ==0) {
+    if ($life1 <= 0) {
+        $winId = $_GET['id2'];
+     header("Location:win.php?id=" . $winId);
+    } elseif ($life2 <= 0) {
+        $winId = $_GET['id1'];
+     header("Location:win.php?id=" . $winId);
+    }
+}
+
+if ($start == 1) {
+    $life2 = attaque($life2);
+    $start = 2;
+} elseif ($start == 2) {
+    $life1 = attaque($life1);
+    $start = 1;
+}
+
+
+
 
 
 ?>
@@ -73,7 +100,10 @@ if (isset ($_GET['id2'])){
             Combat :<?= $heroManager->selectById($_GET['id1'])->powerstats->combat; ?><br>
 
         </div>
-        <div class="col-6 text-center"></div>
+        <div class="col-6 text-center">
+            <a href="/public/fight.php?id1=<?= $_GET['id1']; ?>&id2=<?= $_GET['id2']; ?>&pv1=<?= $life1; ?>&pv2=<?= $life2; ?>&start=<?= $start; ?>"><img src="http://via.placeholder.com/350x65">
+            </a>
+        </div>
         <div class="col-3 ">
             Brain :<?= $heroManager->selectById($_GET['id2'])->powerstats->intelligence; ?><br>
             Strength :<?= $heroManager->selectById($_GET['id2'])->powerstats->strength; ?><br>

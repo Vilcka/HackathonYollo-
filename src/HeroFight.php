@@ -14,6 +14,10 @@ require '../vendor/autoload.php';
 
 class HeroFight
 {
-    private $
+    public function attaque(int $lifeEnnemies)
+    {
+        return $lifeEnnemies - 10;
+
+    }
 }
 

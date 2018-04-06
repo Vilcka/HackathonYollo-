@@ -21,7 +21,10 @@ function starter($speed1,$speed2){
     }
 
     return $res;
+}
 
 
-
+function attaque($lifeEnnemies)
+{
+    return $lifeEnnemies - 10;
 }
