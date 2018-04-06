@@ -22,12 +22,25 @@ $heroManager = new App\HeroManager();
 <body>
 <main role="main" class="container">
 
-
-<div class="row mb-5 mt-5">
-    <img class="img-fluid" class="jpg" src="<?= $heroManager->selectById($_GET['id'])->images->lg; ?>" width="100%">
-
+<br><br>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-8">
+        <img class="img-fluid" class="jpg" src="<?= $heroManager->selectById($_GET['id'])->images->lg; ?>" >
+    </div>
 </div>
-</div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-8">
+        <p style="font-size:65px">WINNER !</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-8">
+        <a href="index.php" style="text-align: center;">Retour</a>
+        </div>
+    </div>
 </main><!-- /.container -->
 
 <!-- Bootstrap core JavaScript

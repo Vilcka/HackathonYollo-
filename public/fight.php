@@ -70,6 +70,7 @@ if($life1 <= 0 || $life2 <=0) {
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -78,15 +79,15 @@ if($life1 <= 0 || $life2 <=0) {
 <main role="main" class="container">
 
     <div class="row mb-5 mt-5">
-        <div class="col-3"><img class="img-fluid" src="
+        <div class="col-3"><img class="img-fluid" <?php if($_GET['start'] == 1) { echo "style='box-shadow: 1px 1px 30px red' ";} ?> src="
             <?php if(!empty($_GET['id1'])): ?>
                 <?= $heroManager->selectById($_GET['id1'])->images->md ; ?>">
             <?php else :?>
                 <?= 'generique.jpg';?>">
             <?php endif; ?>
         </div>
-        <div class="col-6 text-center"><img class="img-fluid" src="https://static.comicvine.com/uploads/original/8/84424/5095081-6043063200-stick.png"></div>
-        <div class="col-3"><img class="img-fluid" src="
+        <div class="col-6 text-center"><img class="img-fluid"  src="https://static.comicvine.com/uploads/original/8/84424/5095081-6043063200-stick.png"></div>
+        <div class="col-3"><img class="img-fluid" <?php if($_GET['start'] == 2) { echo "style='box-shadow: 1px 1px 30px blue' ";} ?> src="
             <?php if(!empty($_GET['id1'])): ?>
                 <?= $heroManager->selectById($_GET['id2'])->images->md ; ?>">
             <?php else :?>
