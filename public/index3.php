@@ -65,7 +65,7 @@ if (isset ($_GET['id2'])){
     </div>
 </main>
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 zoom">
         <?php for($i=1;$i<7;$i++): ?>
             <div class="col-2">
                 <a href="index2.php?id1=<?= $i; ?>">
