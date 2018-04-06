@@ -1,0 +1,17 @@
+{
+    "name": "legolas/hackathon-yolo",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "authors": [
+        {
+            "name": "Gauthier Arnaud",
+            "email": "Vilc86@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
