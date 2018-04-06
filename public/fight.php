@@ -30,15 +30,17 @@ if(isset($_GET['attack'])) {
 }
 
 if ($start == 1) {
-    $life2 = attaque($life2,$attack);
+//    $life2 = attaque($life2,$attack);
+    $life2 = attack($life2);
     $start = 2;
 } elseif ($start == 2) {
-    $life1 = attaque($life1,$attack);
+//    $life1 = attaque($life1,$attack);
+    $life1 = attack($life1);
     $start = 1;
 }
 
 
-if($life1 == 0 || $life2 ==0) {
+if($life1 <= 0 || $life2 <=0) {
     if ($life1 <= 0) {
         $winId = $_GET['id2'];
      header("Location:win.php?id=" . $winId);

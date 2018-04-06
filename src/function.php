@@ -24,6 +24,11 @@ function starter($speed1,$speed2){
 }
 
 
+function attack($lifeEnnemies)
+{
+    return $lifeEnnemies - (10 + rand(0,10)) ;
+}
+
 function attaque($lifeEnnemies ,$attack)
 {
     if($attack == 1) {
