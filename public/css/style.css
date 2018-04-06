@@ -1,0 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+body{
+    background-color: black;
+    color:white;
+    font-family: 'Poor Story', cursive;
+}
+.thumb{
+    margin-left: 30px;
+}
